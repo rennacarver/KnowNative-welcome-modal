@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Modal Practice</title>
+</head>
+<body>
+    <img src="KN.png" alt="KN app" height="600vh">
+
+    <!--Welcome Modal 1-->
+    <dialog class="dialog-one">
+        <div class="dialog-padding">
+            <div class="progress-div">
+                <div class="progress-dashes active"></div>
+                <div class="progress-dashes inactive"></div>
+                <div class="progress-dashes inactive"></div>
+            </div>
+            <h1>Welcome to KnowNative!</h1>
+            <p>KnowNative can help you read and study texts written in Mandarin Chinese.</p>
+            <p>We'll help you choose a <span class="bolded">sample text</span> for this demo based on your language level. In the full version of KnowNative, you can use any text you like.</p>
+            <div class="button-div">
+                <button class="dialog-two next" autofocus>Next</button>
+            </div>
+        </div>
+    </dialog>
+    
+    <!--Welcome Modal 2-->
+    <dialog class="dialog-two">
+        <div class="dialog-padding">
+            <div class="progress-div">
+                <div class="progress-dashes active"></div>
+                <div class="progress-dashes active"></div>
+                <div class="progress-dashes inactive"></div>
+            </div>
+            <h1>Choose your level</h1>
+            <p>How would you describe your proficiency in Mandarin Chinese?</p>
+            <form>
+                <label for="beginnerRadioButton">
+                    <div class="radio-div beginner-div">
+                        <input type="radio" value="beginner" name="text-choice" id="beginnerRadioButton"  />
+                        <h3>Beginner</h3>
+                        <span>TOCFL 1-2</span>
+                        <p>You can understand and use simple words and phrases.</p>
+                    </div>
+                </label>
+
+                <label for="intermediateRadioButton">
+                    <div class="radio-div intermediate-div">
+                        <input type="radio" value="intermediate" name="text-choice" id="intermediateRadioButton" />
+                        <h3>Intermediate</h3>
+                        <span>TOCFL 3-4</span>
+                        <p>You can conduct basic communication in daily life, study, and work. You can manage most communication when traveling in China.</p>
+                    </div>
+                </label>
+
+                <label for="advancedRadioButton">
+                    <div class="radio-div advanced-div">
+                        <input type="radio" value="advanced" name="text-choice" id="advancedRadioButton" />
+                        <h3>Advanced</h3>
+                        <span>TOCFL 5-6</span>
+                        <p>You can read Chinese newspapers and magazines, watch Chinese films and TV shows, and can write and deliver a full speech.</p>
+                    </div>
+                </label>
+            </form>
+            <div class="button-div">
+                <button class="dialog-three next" autofocus>Next</button>
+                <button class="dialog-one back" autofocus>Back</button>
+            </div>
+        </div>
+    </dialog>
+
+    <!--Welcome Modal 3-->
+    <dialog class="dialog-three">
+        <div class="dialog-padding">
+            <div class="progress-div">
+                <div class="progress-dashes active"></div>
+                <div class="progress-dashes active"></div>
+                <div class="progress-dashes active"></div>
+            </div>
+            <h1>Great!</h1>
+            <p>Let's get started with a <span id="textChoice" class="bolded">beginner</span>-level text.</p>
+            <p>You can choose a different text at any time using the Library icon in the left toolbar.</p>
+            <div class="button-div">
+                <button class="exit next" autofocus>Let's go!</button>
+                <button class="dialog-two-from-three back" autofocus>Back</button>
+            </div>
+        </div>
+    </dialog>
+ 
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>
