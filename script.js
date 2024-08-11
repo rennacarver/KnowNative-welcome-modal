@@ -10,6 +10,7 @@ const beginnerDiv = document.querySelector("div.beginner-div");
 const intermediateDiv = document.querySelector("div.intermediate-div");
 const advancedDiv = document.querySelector("div.advanced-div");
 
+//Page Load
 //display page one, hide pages two and three on page load
 document.querySelector(".page-two").style.display = 'none';
 document.querySelector(".page-three").style.display = 'none';
