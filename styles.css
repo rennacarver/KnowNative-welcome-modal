@@ -22,6 +22,7 @@ dialog {
     border-radius: 7px;
     padding: 30px 30px 30px 30px;
     box-shadow: 0px 10px 1rem #999;
+    transition:all ease-in 0.2s;
 }
 
 .dialog-padding {
@@ -39,17 +40,19 @@ dialog {
 /****************/
 div.radio-div {
     box-sizing: border-box;
-    height: auto;
+    max-height: 300px;
     width: 100%;
     border: solid #576062 2px;
     border-radius: 5px;
     margin-bottom: 10px;
     padding: 10px;
+    transition: max-height 1s linear;
 }
 
 .active-radio-div {
     border: solid #2F696B 2px;
     background-color: #E7F2F5;
+    max-height: 500px;
 }
 
 div.radio-div>p {
