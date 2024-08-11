@@ -1,10 +1,8 @@
-const dialogOne = document.querySelector("dialog.dialog-one");
-const dialogTwo = document.querySelector("dialog.dialog-two");
-const dialogThree = document.querySelector("dialog.dialog-three");
+const dialogWelcome = document.querySelector("dialog.dialog-welcome");
 
-const toOneButton = document.querySelector("button.dialog-one");
-const toTwoButton = document.querySelector("button.dialog-two");
-const toThreeButton = document.querySelector("button.dialog-three");
+const toOneFromTwo = document.querySelector("button.dialog-one");
+const toTwoFromOne = document.querySelector("button.dialog-two");
+const toThreeFromTwo = document.querySelector("button.dialog-three");
 const toTwoFromThreeButton = document.querySelector("button.dialog-two-from-three");
 const exitButton = document.querySelector("button.exit");
 
@@ -12,60 +10,47 @@ const beginnerDiv = document.querySelector("div.beginner-div");
 const intermediateDiv = document.querySelector("div.intermediate-div");
 const advancedDiv = document.querySelector("div.advanced-div");
 
-let textSelection = " ";
+//Page Load
+//display page one, hide pages two and three on page load
+document.querySelector(".page-two").style.display = 'none';
+document.querySelector(".page-three").style.display = 'none';
 
-dialogOne.showModal();
+//initialize radio choice to beginner
+let textSelection = "beginner";
+document.getElementById("textChoice").innerHTML = textSelection;
+beginnerDiv.classList.add('active-radio-div');
+document.getElementById('beginnerRadioButton').checked = true;
 
-//On initial page load, set text selection div to active
-if (document.getElementById('beginnerRadioButton').checked){
-  beginnerDiv.classList.add('active-radio-div');
-  textSelection = "beginner";
-  document.getElementById("textChoice").innerHTML = textSelection
-} 
-  
-
-if (document.getElementById('intermediateRadioButton').checked){
-  intermediateDiv.classList.add('active-radio-div');
-  textSelection = "intermediate";
-  document.getElementById("textChoice").innerHTML = textSelection
-} 
-  
-
-if (document.getElementById('advancedRadioButton').checked){
-  advancedDiv.classList.add('active-radio-div');
-  textSelection = "advanced";
-  document.getElementById("textChoice").innerHTML = textSelection
-} 
-  
+dialogWelcome.showModal();
 
 // Navigation button logic
-// toTwoButton button closes the first modal and opens the second modal
-toTwoButton.addEventListener("click", () => {
-    dialogOne.close();
-    dialogTwo.showModal();
+// toTwoFromOne button closes the first modal and opens the second modal
+toTwoFromOne.addEventListener("click", () => {
+  document.querySelector(".page-one").style.display = 'none';
+  document.querySelector(".page-two").style.display = 'block';
   });
 
-// toOneButton button closes the second modal and opens the first modal
-toOneButton.addEventListener("click", () => {
-    dialogTwo.close();
-    dialogOne.showModal();
+// toOneFromTwo button closes the second modal and opens the first modal
+toOneFromTwo.addEventListener("click", () => {
+    document.querySelector(".page-one").style.display = 'block';
+    document.querySelector(".page-two").style.display = 'none';
   });
 
-// toThreeButton button closes the second modal and opens the third modal
-toThreeButton.addEventListener("click", () => {
-    dialogTwo.close();
-    dialogThree.showModal();
+// toThreeFromTwo button closes the second modal and opens the third modal
+toThreeFromTwo.addEventListener("click", () => {
+    document.querySelector(".page-three").style.display = 'block';
+    document.querySelector(".page-two").style.display = 'none';
   });
 
 // toTwoFromThreeButton button closes the third modal and opens the second modal
 toTwoFromThreeButton.addEventListener("click", () => {
-    dialogThree.close();
-    dialogTwo.showModal();
+    document.querySelector(".page-three").style.display = 'none';
+    document.querySelector(".page-two").style.display = 'block';
   });
 
 // exit button closes the third modal and submits the text selection
 exitButton.addEventListener("click", () => {
-  dialogThree.close();
+  dialogWelcome.close();
   
   fetch("https://jsonplaceholder.typicode.com/todos", {
   method: "POST",
@@ -83,8 +68,8 @@ exitButton.addEventListener("click", () => {
 // Radio button logic
 //when the radio div is clicked, make that div active and the other two inactive
 //display explanation of text level
-//set value for form submitted by modal three
-//set the text level on modal three
+//set value for form submitted by page three
+//set the text level on page three
 
 beginnerDiv.addEventListener("click", () => {
   if (document.getElementById('beginnerRadioButton').checked) {
