@@ -13,9 +13,11 @@
 <body>
     <img src="KN.png" alt="KN app" height="600vh">
 
-    <!--Welcome Modal 1-->
-    <dialog class="dialog-one">
-        <div class="dialog-padding">
+   
+    <dialog class="dialog-welcome">
+
+         <!--Welcome Modal Page 1-->
+        <div class="dialog-padding page-one">
             <div class="progress-div">
                 <div class="progress-dashes active"></div>
                 <div class="progress-dashes inactive"></div>
@@ -28,11 +30,9 @@
                 <button class="dialog-two next" autofocus>Next</button>
             </div>
         </div>
-    </dialog>
-    
-    <!--Welcome Modal 2-->
-    <dialog class="dialog-two">
-        <div class="dialog-padding">
+
+        <!--Welcome Modal Page 2-->
+        <div class="dialog-padding page-two">
             <div class="progress-div">
                 <div class="progress-dashes active"></div>
                 <div class="progress-dashes active"></div>
@@ -43,7 +43,7 @@
             <form>
                 <label for="beginnerRadioButton">
                     <div class="radio-div beginner-div">
-                        <input type="radio" value="beginner" name="text-choice" id="beginnerRadioButton"  />
+                        <input type="radio" value="beginner" name="text-choice" id="beginnerRadioButton" checked />
                         <h3>Beginner</h3>
                         <span>TOCFL 1-2</span>
                         <p>You can understand and use simple words and phrases.</p>
@@ -73,11 +73,10 @@
                 <button class="dialog-one back" autofocus>Back</button>
             </div>
         </div>
-    </dialog>
 
-    <!--Welcome Modal 3-->
-    <dialog class="dialog-three">
-        <div class="dialog-padding">
+        <!--Welcome Modal 3-->
+    
+        <div class="dialog-padding page-three">
             <div class="progress-div">
                 <div class="progress-dashes active"></div>
                 <div class="progress-dashes active"></div>
@@ -91,6 +90,7 @@
                 <button class="dialog-two-from-three back" autofocus>Back</button>
             </div>
         </div>
+
     </dialog>
  
 </body>
