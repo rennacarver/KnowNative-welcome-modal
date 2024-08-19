@@ -18,13 +18,27 @@ dialog {
     box-sizing: border-box;
     overflow: auto;
     width: 600px;
-    height: 525px;
     border: solid #bebebe 1px;
     border-radius: 7px;
     padding: 30px 30px 30px 30px;
     box-shadow: 0px 10px 1rem #999;
     overflow: hidden;
-    /* transition: all ease-in 1s; */
+    
+}
+
+dialog.page-one-active {
+    height: 400px;
+    transition: all ease-in 0.2s;
+}
+
+dialog.page-two-active {
+    height: 530px;
+    transition: all ease-in 0.2s;
+}
+
+dialog.page-three-active {
+    height: 350px;
+    transition: all ease-in 0.2s;
 }
 
 .dialog-padding {

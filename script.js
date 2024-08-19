@@ -29,6 +29,7 @@ document.getElementById("beginnerRadioButton").checked = true;
 
 dialogWelcome.showModal();
 
+
 // Navigation button logic
 // toTwoFromOne button closes the first modal and opens the second modal
 toTwoFromOne.addEventListener("click", () => {
@@ -37,6 +38,9 @@ toTwoFromOne.addEventListener("click", () => {
 
     beginnerDiv.classList.add("active-radio-div", "active");
     beginnerText.classList.add("show");
+
+    //change height of modal
+    dialogWelcome.className = "page-two-active dialog-welcome"
 });
 
 // toOneFromTwo button closes the second modal and opens the first modal
@@ -46,6 +50,9 @@ toOneFromTwo.addEventListener("click", () => {
 
     beginnerDiv.classList.remove("active-radio-div", "active");
     beginnerText.classList.remove("show");
+
+    //change height of modal
+    dialogWelcome.className = "page-one-active dialog-welcome"
 });
 
 // toThreeFromTwo button closes the second modal and opens the third modal
@@ -55,6 +62,9 @@ toThreeFromTwo.addEventListener("click", () => {
 
     beginnerDiv.classList.remove("active-radio-div", "active");
     beginnerText.classList.remove("show");
+
+    //change height of modal
+    dialogWelcome.className = "page-three-active dialog-welcome"
 });
 
 // toTwoFromThreeButton button closes the third modal and opens the second modal
@@ -64,6 +74,9 @@ toTwoFromThreeButton.addEventListener("click", () => {
 
     beginnerDiv.classList.add("active-radio-div", "active");
     beginnerText.classList.add("show");
+
+    //change height of modal
+    dialogWelcome.className = "page-two-active dialog-welcome"
 });
 
 // exit button closes the third modal and submits the text selection
@@ -79,6 +92,9 @@ exitButton.addEventListener("click", () => {
             "Content-type": "application/json; charset=UTF-8",
         },
     });
+
+    //change height of modal
+    dialogWelcome.className = "page-one-active dialog-welcome"
 });
 
 // Radio button logic
