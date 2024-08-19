@@ -14,7 +14,7 @@ Welcome Modal for Knownative V2
 
 HTML, CSS, JavaScript
 
-This prototype was later implemented in React and merged into the main Knownative codebase.
+This prototype was later implemented in React ([here](https://github.com/rennacarver/KnowNative-Welcome-Modal-React?tab=readme-ov-file)) and merged into the main Knownative codebase.
 
 ## Lessons Learned/Future Enhancements
 
