@@ -1,4 +1,4 @@
-# KnowNative-welcome-modal
+# KnowNative Welcome Modal
 Welcome Modal for Knownative V2
 
 ![Knownative welcome modal large](https://github.com/user-attachments/assets/bb64b62b-fbc6-461d-917e-5a64d2db66a7)
