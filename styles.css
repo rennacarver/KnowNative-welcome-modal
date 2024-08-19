@@ -9,7 +9,7 @@ html {
 
 h1 {
     margin-top: 60px;
-    font-weight:500;
+    font-weight: 500;
 }
 
 /* Modal Dialog */
@@ -18,11 +18,13 @@ dialog {
     box-sizing: border-box;
     overflow: auto;
     width: 600px;
-    border: solid #BEBEBE 1px;
+    height: 525px;
+    border: solid #bebebe 1px;
     border-radius: 7px;
     padding: 30px 30px 30px 30px;
     box-shadow: 0px 10px 1rem #999;
-    transition: all ease-in 1s;
+    overflow: hidden;
+    /* transition: all ease-in 1s; */
 }
 
 .dialog-padding {
@@ -32,7 +34,7 @@ dialog {
 }
 
 ::backdrop {
-    background-color:#999;
+    background-color: #999;
     opacity: 0.5;
 }
 
@@ -49,44 +51,45 @@ div.radio-div {
 }
 
 .active-radio-div {
-    border: solid #2F696B 2px;
-    background-color: #E7F2F5;
+    border: solid #2f696b 2px;
+    background-color: #e7f2f5;
     max-height: 500px;
 }
 
-div.radio-div>p {
-    display: none;
+div.radio-div > p {
+    /* display: none; */
+    height: 0;
     width: 60%;
     margin-left: 37px;
     font-size: 13px;
 }
 
-div.radio-div>h3 {
+div.radio-div > h3 {
     display: inline;
     font-weight: 200;
     margin-left: 5px;
 }
 
-div.radio-div>span {
+div.radio-div > span {
     color: #576062;
     margin-top: 3px;
 }
 
-div.radio-div>span {
+div.radio-div > span {
     float: right;
 }
 
-div.active-radio-div>p{
+div.active-radio-div > p {
     display: block;
 }
 
-div.active-radio-div>h3,
-div.active-radio-div>span,
-div.active-radio-div>p{
-    color: #2F696B;
+div.active-radio-div > h3,
+div.active-radio-div > span,
+div.active-radio-div > p {
+    color: #2f696b;
 }
 
-div.active-radio-div>h3{
+div.active-radio-div > h3 {
     font-weight: 400;
 }
 
@@ -106,13 +109,13 @@ button {
 }
 
 button.next {
-    background-color: #2E686B;
+    background-color: #2e686b;
     color: white;
 }
 
 button.back {
-    background-color: #E7F2F5;
-    color: #2E686B;
+    background-color: #e7f2f5;
+    color: #2e686b;
 }
 
 /* Progress Bar */
@@ -133,11 +136,11 @@ button.back {
 }
 
 .active {
-    border: 2px solid #53A4A7;
+    border: 2px solid #53a4a7;
 }
 
 .inactive {
-    border: 2px solid #F0F6F8;
+    border: 2px solid #f0f6f8;
 }
 
 /* Radio Buttons */
@@ -145,17 +148,51 @@ button.back {
 input[type="radio"] {
     vertical-align: top;
     margin-top: 1px;
-    border:4px solid white;
-    box-shadow:0 0 0 2px #999;
-    appearance:none;
-    border-radius:50%;
-    width:20px;
-    height:20px;
+    border: 4px solid white;
+    box-shadow: 0 0 0 2px #999;
+    appearance: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
     /* background-color:#fff; */
-    transition:all ease-in 0.2s;
+    /* transition: all ease-in 1s; */
 }
 
 input[type="radio"]:checked {
-    background-color:#2F696B;
-    box-shadow:0 0 0 2px #2F696B;
+    background-color: #2f696b;
+    box-shadow: 0 0 0 2px #2f696b;
+}
+
+/* New CSS rules */
+.radio-div.beginner-div,
+.radio-div.intermediate-div,
+.radio-div.advanced-div {
+    height: 50px;
+    transition: height 0.45s;
+}
+
+.radio-div.beginner-div.active {
+    height: 100px;
+}
+
+.radio-div.intermediate-div.active {
+    height: 120px;
+}
+
+.radio-div.advanced-div.active {
+    height: 120px;
+}
+
+#beginner-text,
+#intermediate-text,
+#advanced-text {
+    opacity: 0;
+    transition: opacity 0.1s;
+    transition-delay: 0.15s;
+}
+
+#beginner-text.show,
+#intermediate-text.show,
+#advanced-text.show {
+    opacity: 1;
 }
